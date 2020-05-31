@@ -1,0 +1,23 @@
+{
+  "name": "expressProject",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/kapeiharshad/expressProject.git",
+  "author": "HarshadKapei",
+  "license": "MIT",
+  "scripts": {
+    "prod": "NODE_ENV=production nodemon",
+    "dev": "NODE_ENV=development nodemon",
+    "prod_win": "set NODE_ENV = production && nodemon",
+    "dev_win": "set NODE_ENV = development && nodemon"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.0-beta2",
+    "mongoose": "^5.6.9",
+    "node": "^10.16.2",
+    "nodemon": "^1.19.2"
+  }
+}
