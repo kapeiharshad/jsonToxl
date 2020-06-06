@@ -1,9 +1,9 @@
 var mongoose = require("mongoose");
 var bigData = require("../schema/bigData");
 const fs = require("fs");
-const path = require("path");
-const Grid = require("gridfs-stream");
-const conn = mongoose.connection;
+// const path = require("path");
+// const Grid = require("gridfs-stream");
+// const conn = mongoose.connection;
 module.exports = {
   uploadFile: async function (from, to) {
     console.log("from to::", from, to);
