@@ -4,6 +4,8 @@ const env = require("./config/env")();
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const mongoose = require("mongoose");
+const json2xls = require("json2xls");
+
 mongoose.connect(
   env.mongoUrl + "jsontoxl",
   {
@@ -14,6 +16,7 @@ mongoose.connect(
   }
 );
 app.use(bodyParser.json());
+app.use(json2xls.middleware);
 
 const controllerfiles = fs.readdirSync("./controller/");
 for (var i = 0; i <= controllerfiles.length - 1; i++) {
