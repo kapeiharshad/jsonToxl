@@ -1,9 +1,6 @@
 const bigDataModel = require("../model/bigDataModel");
 var express = require("express");
 var router = express.Router();
-var fs = require("fs");
-const Excel = require("exceljs");
-const tempfile = require("tempfile");
 
 //*********************By using async-await***************************
 router.post("/uploadFile", async (req, res) => {
@@ -26,18 +23,13 @@ router.post("/getXl", async (req, res) => {
 
 router.get("/createExcel", async function (req, res, next) {
   try {
-    let xlData = await bigDataModel.createExcel();
-    res.end();
-    // fs.appendFile("/home/wohlig/Downloads/data.xlsx", xlData, "binary");
-    // res.download("/home/wohlig/Downloads/data.xlsx", "data.xlsx");
-  } catch (err) {
-    res.status(500).send(err);
-  }
-});
-
-router.get("/appendExcel", async function (req, res, next) {
-  try {
-    let xlData = await bigDataModel.appendExcel();
+    let xlData = await bigDataModel.createExcel(
+      0,
+      500000,
+      1,
+      5000000,
+      new Date()
+    );
     res.end();
   } catch (err) {
     res.status(500).send(err);
