@@ -6,8 +6,8 @@
   "author": "HarshadKapei",
   "license": "MIT",
   "scripts": {
-    "prod": "NODE_ENV=production nodemon",
-    "dev": "NODE_ENV=development nodemon",
+    "prod": "NODE_ENV=production nodemon  --max-old-space-size=4000 app.js",
+    "dev": "NODE_ENV=development nodemon --max-old-space-size=4000 app.js",
     "prod_win": "set NODE_ENV = production && nodemon",
     "dev_win": "set NODE_ENV = development && nodemon"
   },
