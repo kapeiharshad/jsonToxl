@@ -54,7 +54,6 @@ module.exports = {
   },
 
   createExcel: async function (from, to, loopNum, limit, startTime) {
-    // node --max-old-space-size=6000 app.js before runnig this api
     console.log("from createExcel :::");
     console.log("loopNum::::::::", loopNum);
     console.log("from, to ,limit,", from, to, limit);
